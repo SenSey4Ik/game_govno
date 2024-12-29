@@ -9,6 +9,10 @@ number_x = randint(1,100)
 player_govno = ['О','Н','В','О','Г']
 computer_govno = ['О','Н','В','О','Г']
 
+#Копируем список букв для игрока и компьютера
+copy_player_govno = []
+copy_computer_govno = []
+
 #Промежуточный список
 letter_govno = []
 
@@ -29,7 +33,8 @@ def circle_1(number_player, new_player_govno=[],new_computer_govno=[],the_end=''
                 print(f'У вас осталось {attempt} попыток')
                 number_player = int(input('Введите число: '))
                 if attempt == 1:
-                    letter_govno = player_govno.pop()
+                    copy_player_govno = player_govno[:]
+                    letter_govno = copy_player_govno.pop()
                     new_player_govno.append(letter_govno)
                     if new_player_govno != ['Г','О','В','Н','О']:
                         print('\nВы получаете букву!')
@@ -47,7 +52,8 @@ def circle_1(number_player, new_player_govno=[],new_computer_govno=[],the_end=''
                 print(f'У вас осталось {attempt} попыток')
                 number_player = int(input('Введите число: '))
                 if attempt == 1:
-                    letter_govno = player_govno.pop()
+                    copy_player_govno = player_govno[:]
+                    letter_govno = copy_player_govno.pop()
                     new_player_govno.append(letter_govno)
                     if new_player_govno != ['Г', 'О', 'В', 'Н', 'О']:
                         print('\nВы получаете букву!')
@@ -60,7 +66,8 @@ def circle_1(number_player, new_player_govno=[],new_computer_govno=[],the_end=''
 
 
             else:
-                letter_govno = computer_govno.pop()
+                copy_computer_govno = computer_govno[:]
+                letter_govno = copy_computer_govno.pop()
                 new_computer_govno.append(letter_govno)
                 if new_computer_govno != ['Г', 'О', 'В', 'Н', 'О']:
                     print('\nВерно!')
