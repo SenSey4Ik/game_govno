@@ -3,13 +3,7 @@ from instructions import instructions
 from question_instructions import question_instructions
 from circle_1 import circle_1
 
-#Список букв для игрока и компьютера
-player_govno = ['О','Н','В','О','Г']
-computer_govno = ['О','Н','В','О','Г']
 
-#Создаем пустой список для накопления букв для игрока и компьютера
-new_player_govno = []
-new_computer_govno = []
 
 
 #Приветствие с игроком

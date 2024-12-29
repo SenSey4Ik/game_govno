@@ -9,11 +9,14 @@ number_x = randint(1,100)
 player_govno = ['О','Н','В','О','Г']
 computer_govno = ['О','Н','В','О','Г']
 
+#Промежуточный список
+letter_govno = []
+
 #Создаем пустой список для накопления букв для игрока и компьютера
 new_player_govno = []
 new_computer_govno = []
 
-def circle_1(number_player, new_player_govno='',new_computer_govno=''):
+def circle_1(number_player, new_player_govno=[],new_computer_govno=[]):
     while new_player_govno or new_computer_govno != ['Г','О','В','Н','О']:
         attempt = 5
         while attempt != 1:
@@ -23,11 +26,16 @@ def circle_1(number_player, new_player_govno='',new_computer_govno=''):
                 print(f'У вас осталось {attempt} попыток')
                 number_player = int(input('Введите число: '))
                 if attempt == 1:
-                    new_player_govno = player_govno.pop()
-
-                    print('\nВы получаете букву!')
-                    print(new_player_govno)
-                    continue
+                    letter_govno = player_govno.pop()
+                    new_player_govno.append(letter_govno)
+                    if new_player_govno == ['Г','О','В','Н','О']:
+                        print('Вы проиграли! Вы ГОВНО')
+                        break
+                    else:
+                        print('\nВы получаете букву!')
+                        print(new_player_govno)
+                        number_player = int(input('\nВведите число: '))
+                        continue
 
             elif number_player < number_x:
                 print(f'Неверно! Загаданное число > {number_player}\n')
@@ -35,16 +43,27 @@ def circle_1(number_player, new_player_govno='',new_computer_govno=''):
                 print(f'У вас осталось {attempt} попыток')
                 number_player = int(input('Введите число: '))
                 if attempt == 1:
-                    new_player_govno = player_govno.pop()
-
-                    print('\nВы получаете букву!')
-                    print(new_player_govno)
-                    continue
+                    letter_govno = player_govno.pop()
+                    new_player_govno.append(letter_govno)
+                    if new_player_govno == ['Г','О','В','Н','О']:
+                        print('Вы проиграли! Вы ГОВНО')
+                        break
+                    else:
+                        print('\nВы получаете букву!')
+                        print(new_player_govno)
+                        number_player = int(input('\nВведите число: '))
+                        continue
 
 
             else:
-                new_computer_govno = computer_govno.pop()
-                print('\nВерно!')
-                print('Компьютер получает букву!')
-                print(new_computer_govno)
+                letter_govno = computer_govno.pop()
+                new_computer_govno.append(letter_govno)
+                if new_computer_govno == ['Г', 'О', 'В', 'Н', 'О']:
+                    print('Вы победили! Компьютер ГОВНО')
+                    break
+                else:
+                    print('\nВерно!')
+                    print('Компьютер получает букву!')
+                    print(new_computer_govno)
+                    number_player = int(input('\nВведите число: '))
 
