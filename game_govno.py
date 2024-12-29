@@ -21,5 +21,3 @@ question_instructions(choice)
 
 number_player = int(input('Введите число: '))
 circle_1(number_player)
-
-circle_5()
