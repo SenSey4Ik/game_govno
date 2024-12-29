@@ -16,10 +16,11 @@ letter_govno = []
 new_player_govno = []
 new_computer_govno = []
 
+
 def circle_1(number_player, new_player_govno=[],new_computer_govno=[]):
-    while new_player_govno or new_computer_govno != ['Г','О','В','Н','О']:
+    while True and new_player_govno or new_computer_govno != ['Г','О','В','Н','О']:
         attempt = 5
-        while attempt != 1:
+        while True and attempt != 1:
             if number_player > number_x:
                 print(f'Неверно! Загаданное число < {number_player}\n')
                 attempt = attempt - 1
