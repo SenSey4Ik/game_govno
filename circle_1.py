@@ -46,6 +46,7 @@ def circle_1(number_player, new_player_govno=[],new_computer_govno=[],the_end=''
                         the_end = 'Вы проиграли! Вы ГОВНО'
 
 
+
             elif number_player < number_x:
                 print(f'Неверно! Загаданное число > {number_player}\n')
                 attempt = attempt - 1
