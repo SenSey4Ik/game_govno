@@ -2,6 +2,7 @@ import random
 from instructions import instructions
 from question_instructions import question_instructions
 from circle_1 import circle_1
+from repeat import repeat_game
 
 
 
@@ -18,3 +19,5 @@ number_player = int(input('Введите число: '))
 circle_1(number_player)
 
 #Предлагаем игроку сыграть заново
+repeat = input('\nЖелаете сыграть снова? ')
+repeat_game(repeat)
