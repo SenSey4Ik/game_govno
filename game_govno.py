@@ -1,7 +1,7 @@
 import random
 from instructions import instructions
 from question_instructions import question_instructions
-import circle_1
+from circle_1 import circle_1
 
 #Список букв для игрока и компьютера
 player_govno = ['О','Н','В','О','Г']
@@ -19,3 +19,7 @@ name_player = input('Приветствую тебя в игре ГОВНО!\n �
 choice = input(f'\n{name_player}, вы хотели бы ознакомиться с инструкцией? (да/нет): ')
 question_instructions(choice)
 
+number_player = int(input('Введите число: '))
+circle_1(number_player)
+
+circle_5()
