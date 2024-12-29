@@ -1,8 +1,17 @@
 from random import randint
 
+#Создаем пустой список для накопления букв для игрока и компьютера
+new_player_govno = []
+new_computer_govno = []
+
+#Список букв для игрока и компьютера
+player_govno = ['О','Н','В','О','Г']
+computer_govno = ['О','Н','В','О','Г']
+
 #Загадываем рандомное число
 number_x = randint(1,100)
 
+number_player = int(input('Введите число: '))
 
 def circle_1(number_player):
     attempt = 5
