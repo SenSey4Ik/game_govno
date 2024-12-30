@@ -6,7 +6,6 @@ from repeat import repeat_game
 from copy_list import copy_list_player_govno, copy_list_computer_govno
 
 
-
 #Приветствие с игроком
 name_player = input('Приветствую тебя в игре ГОВНО!\n Введите ваше имя: ')
 

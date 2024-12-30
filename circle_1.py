@@ -2,8 +2,7 @@ from random import randint
 from copy_list import copy_list_computer_govno, copy_list_player_govno
 
 number_player = int
-#Загадываем рандомное число
-number_x = randint(1,100)
+
 
 
 #Список букв для игрока и компьютера
@@ -22,8 +21,10 @@ new_player_govno = []
 new_computer_govno = []
 
 
-def circle_1(number_player, new_player_govno=[],new_computer_govno=[],the_end=''):
+def circle_1(number_player,new_player_govno=[], new_computer_govno=[], the_end=''):
     while True:
+        # Загадываем рандомное число
+        number_x = randint(1, 100)
         if the_end == 'Вы проиграли! Вы ГОВНО':
             break
         attempt = 5
