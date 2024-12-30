@@ -1,4 +1,5 @@
 from random import randint
+from copy_list import copy_list_computer_govno, copy_list_player_govno
 
 number_player = int
 #Загадываем рандомное число
@@ -10,8 +11,8 @@ player_govno = ['О','Н','В','О','Г']
 computer_govno = ['О','Н','В','О','Г']
 
 #Копируем список букв для игрока и компьютера
-copy_player_govno = []
-copy_computer_govno = []
+copy_player_govno = ['О','Н','В','О','Г']
+copy_computer_govno = ['О','Н','В','О','Г']
 
 #Промежуточный список
 letter_govno = []
@@ -33,7 +34,6 @@ def circle_1(number_player, new_player_govno=[],new_computer_govno=[],the_end=''
                 print(f'У вас осталось {attempt} попыток')
                 number_player = int(input('Введите число: '))
                 if attempt == 1:
-                    copy_player_govno = player_govno[:]
                     letter_govno = copy_player_govno.pop()
                     new_player_govno.append(letter_govno)
                     if new_player_govno != ['Г','О','В','Н','О']:
@@ -53,7 +53,6 @@ def circle_1(number_player, new_player_govno=[],new_computer_govno=[],the_end=''
                 print(f'У вас осталось {attempt} попыток')
                 number_player = int(input('Введите число: '))
                 if attempt == 1:
-                    copy_player_govno = player_govno[:]
                     letter_govno = copy_player_govno.pop()
                     new_player_govno.append(letter_govno)
                     if new_player_govno != ['Г', 'О', 'В', 'Н', 'О']:
@@ -67,7 +66,6 @@ def circle_1(number_player, new_player_govno=[],new_computer_govno=[],the_end=''
 
 
             else:
-                copy_computer_govno = computer_govno[:]
                 letter_govno = copy_computer_govno.pop()
                 new_computer_govno.append(letter_govno)
                 if new_computer_govno != ['Г', 'О', 'В', 'Н', 'О']:

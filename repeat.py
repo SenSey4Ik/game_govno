@@ -1,4 +1,5 @@
 from circle_1 import circle_1
+from copy_list import copy_list_player_govno, copy_list_computer_govno
 repeat = ''
 
 def repeat_game(repeat):
